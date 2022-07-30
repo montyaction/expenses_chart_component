@@ -1,0 +1,258 @@
+:root {
+    /* ### Primary */
+    --soft-red: hsl(10, 79%, 65%);
+    --cyan: hsl(186, 34%, 60%);
+
+    /* ### Neutral */
+    --dark-brown: hsl(25, 47%, 15%);
+    --medium-brown: hsl(28, 10%, 53%);
+    --cream: hsl(27, 66%, 92%);
+    --very-pale-orange: hsl(33, 100%, 98%);
+
+    --primary-font: 'DM Sans', sans-serif;
+
+    --fw-regular: 400;
+    --fw-bold: 700;
+
+    --fs-120: 1.2rem;
+    --fs-130: 1.3rem;
+    --fs-150: 1.5rem;
+    --fs-180: 1.8rem;
+    --fs-260: 2.6rem;
+    --fs-270: 2.7rem;
+    --fs-370: 3.7rem;
+}
+
+/* Reset CSS */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+/* General Styles */
+
+body {
+    background: var(--cream);
+    font-family: var(--primary-font);
+    font-size: var(--fs-180);
+    line-height: 1;
+    height: 100vh;
+    padding-bottom: 1rem;
+
+    /* Setup */
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+span {
+    display: block;
+    text-align: right;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Main */
+
+.main {
+    width: min(90%, 430px);
+
+    /* Center vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header {
+    background: var(--soft-red);
+    color: var(--very-pale-orange);
+    padding: 2rem 3rem 2.2rem;
+    border-radius: 1.5rem;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 40px;
+    background-image: url(./images/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.main-heading {
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-150);
+    line-height: 2rem;
+}
+
+.total-balance {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-260);
+    margin-top: 1rem;
+}
+
+.chart {
+  background: var(--very-pale-orange);
+  border-radius: 1.5rem;
+  margin-top: 2rem;
+  padding: 3rem 3rem 4rem;
+}
+
+.chart-title {
+  font-weight: 700;
+  font-size: var(--fs-270);
+  line-height: 3.1rem;
+  color: var(--dark-brown);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: end;
+    gap: 1.4rem;
+    margin: 5.2rem auto 2.6rem;
+}
+
+.bar-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
+
+.bar {
+    background: var(--soft-red);
+    border-radius: 3px;
+    position: relative;
+}
+
+.bar:hover {
+    cursor: pointer;
+}
+
+.tooltip {
+  visibility: hidden;
+  font-weight: 700;
+  font-size: var(--fs-120);
+  line-height: 2.3rem;
+  color: var(--very-pale-orange);
+  background: var(--dark-brown);
+  border-radius: 5px;
+  padding: .5rem 1rem;
+  position: absolute;
+  z-index: 1;
+  right: -7px;
+  /* bottom: calc(120px + 10px); */
+}
+
+.bar:hover .tooltip {
+    visibility: visible;
+}
+
+.label {
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-130);
+    text-align: center;
+    color: var(--medium-brown);
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 2.4rem;
+}
+
+hr {
+    border: 0;
+    border-top: 3px solid var(--cream);
+}
+
+.caption {
+  font-weight: 400;
+  font-size: var(--fs-150);
+  line-height: 2rem;
+  color: var(--medium-brown);
+}
+
+.month-total {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-370);
+  line-height: 3.9rem;
+  color: var(--dark-brown);
+  margin-top: 0.4rem;
+}
+
+.percentage {
+  font-weight: 700;
+  font-size: var(--fs-150);
+  line-height: 2rem;
+  color: var(--dark-brown);
+}
+
+
+/* Attribution */
+
+.attribution {
+    color: var(--dark-brown);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--soft-red);
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --fs-120: 1rem;
+    --fs-130: 1.1rem;
+    --fs-150: 1.3rem;
+    --fs-180: 1.8rem;
+    --fs-260: 2rem;
+    --fs-270: 2.2rem;
+    --fs-370: 2.7rem;
+  }
+
+  body {
+      letter-spacing: .7px;
+  }
+
+  .header {
+    padding: 2rem 3rem 2.2rem;
+    border-radius: 1rem;
+  }
+
+  .chart {
+    padding: 3rem 3rem 2rem;
+    border-radius: 1rem;
+  }
+}

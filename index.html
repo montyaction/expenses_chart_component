@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Expenses chart component</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+ 
+</head>
+<body>
+
+  <main class="main">
+    <h1 class="visually-hidden">Expenses chart</h1>
+    <section class="header">
+      <div>
+        <h2 class="main-heading">My balance</h2>
+        <h3 class="total-balance">$921.48</h3>
+      </div>
+      <div class="logo">
+        <!-- <img src="./images/logo.svg" alt="logo icon"> -->
+      </div>
+    </section>
+    <section class="chart">
+      <h2 class="chart-title">Spending - Last 7 days</h2>
+      <div class="grid">
+        <div class="bar-wrapper">
+          <div class="bar"><span class="tooltip"></span></div>
+          <h3 class="label">mon<span class="visually-hidden expense-amt"></span></h3>
+        </div>
+        <div class="bar-wrapper">
+          <div class="bar"><span class="tooltip"></span></div>
+          <h3 class="label">tue<span class="visually-hidden expense-amt"></span></h3>
+        </div>
+        <div class="bar-wrapper">
+          <div class="bar"><span class="tooltip"></span></div>
+          <h3 class="label">wed<span class="visually-hidden expense-amt"></span></h3>
+        </div>
+        <div class="bar-wrapper">
+          <div class="bar"><span class="tooltip"></span></div>
+          <h3 class="label">thu<span class="visually-hidden expense-amt"></span></h3>
+        </div>
+        <div class="bar-wrapper">
+          <div class="bar"><span class="tooltip"></span></div>
+          <h3 class="label">fri<span class="visually-hidden expense-amt"></span></h3>
+        </div>
+        <div class="bar-wrapper">
+          <div class="bar"><span class="tooltip"></span></div>
+          <h3 class="label">sat<span class="visually-hidden expense-amt"></span></h3>
+        </div>
+        <div class="bar-wrapper">
+          <div class="bar"><span class="tooltip"></span></div>
+          <h3 class="label">sun<span class="visually-hidden expense-amt"></span></h3>
+        </div>
+      </div>
+      <hr>
+      <div class="summary">
+        <div>
+          <h2 class="caption">Total this month</h2>
+          <h3 class="month-total">$478.33</h3>
+        </div>
+        <div>
+          <span class="percentage">+2.4%</span>
+          <span class="caption">from last month</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/montyaction">montyaction</a>.
+    </p>
+  </footer>
+
+  <script src="./myScript.js"></script>
+</body>
+</html>
